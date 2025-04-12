@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Lato:300italic');
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      background: #ee9ca7;
+      font-family: 'Lato', sans-serif;
+    }
+
+    #cake {
+      display: block;
+      margin: 3em auto;
+    }
+
+    .cake {
+      background: #fff;
+      border-radius: 10px;
+      position: absolute;
+      top: 228px;
+      left: 50%;
+      margin-left: -2.4px;
+      width: 5px;
+      height: 35px;
+      transform: translateY(-300px);
+      animation: in 0.5s 6s ease-out forwards;
+    }
+
+    .cake:before,
+    .cake:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2.2px;
+      background: rgba(255, 0, 0, 0.4);
+    }
+
+    .cake:before { top: 25%; }
+    .cake:after { top: 45%; }
+
+    .fuego {
+      border-radius: 100%;
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      margin-left: -2.6px;
+      width: 6.6px;
+      height: 18px;
+    }
+
+    .fuego:nth-child(1) { animation: fuego 2s 6.5s infinite; }
+    .fuego:nth-child(2) { animation: fuego 1.5s 6.5s infinite; }
+    .fuego:nth-child(3) { animation: fuego 1s 6.5s infinite; }
+    .fuego:nth-child(4) { animation: fuego 0.5s 6.5s infinite; }
+    .fuego:nth-child(5) { animation: fuego 0.2s 6.5s infinite; }
+
+    @keyframes fuego {
+      0%, 100% {
+        background: rgba(254, 248, 97, 0.5);
+        box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+        transform: translateY(0) scale(1);
+      }
+      50% {
+        background: rgba(255, 50, 0, 0.1);
+        box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+        transform: translateY(-20px) scale(0);
+      }
+    }
+
+    @keyframes in {
+      to { transform: translateY(0); }
+    }
+
+    .text {
+      padding: 2em;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #8b6a60;
+      font-weight: 300;
+      font-style: italic;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 2.5s ease-in forwards;
+      animation-delay: 7s;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .text h1 {
+      font-size: 1.4em;
+      line-height: 1.8;
+    }
+
+    .name {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cake">
+    <div class="fuego"></div>
+    <div class="fuego"></div>
+    <div class="fuego"></div>
+    <div class="fuego"></div>
+    <div class="fuego"></div>
+  </div>
+
+  <!-- Placeholder SVG Cake (replace with your full animated SVG) -->
+  <svg id="cake" width="200" height="500" viewBox="0 0 200 500">
+    <rect width="200" height="500" fill="#fefae9" />
+  </svg>
+
+  <div class="text">
+    <h1>
+      Happy Birthday!<br><br>
+      On this special day, I want to take a moment to celebrate everything that makes you incredible. You’re not just a year older—you’re a year wiser, stronger, and even more amazing than before. Life has its ups and downs, but you’ve handled every challenge with grace, courage, and a smile that lights up the room.<br><br>
+
+      May this year bring you closer to your dreams, surround you with love, and overflow with blessings that you didn’t even see coming. I hope every moment is filled with peace, every step guided by purpose, and every breath filled with joy. You deserve success, laughter, deep love, and all the happiness the universe has to offer.<br><br>
+
+      Keep being you—authentic, unstoppable, and full of light. This world is better because you’re in it. Cheers to new beginnings, unforgettable memories, and another year of being completely unstoppable.<br><br>
+
+      Happy Birthday once again—shine on.
+    </h1>
+    <p class="name">Happy Birthday Tapchelong</p>
+  </div>
+</body>
+</html>
